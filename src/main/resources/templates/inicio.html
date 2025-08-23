@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" th:href="@{/css/main.css}" />
@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Buscador de Libros</h1>
-<label for="buscar"></label>
+<label for="buscar">Nombre de Autor o T&iacute;tulo del Libro</label>
 <input id="buscar" type="text" />
 <button id="btnBuscarTitulo" type="button" class="boton-buscar">Buscar por T&iacute;tulo</button>
 <button id="btnBuscarAutor" type="button" class="boton-buscar">Buscar por Autor</button>
@@ -23,8 +23,10 @@
             return window.location.href=url;
         });
 
-    document.getElementById('btnBuscarAutor').addEventListener('click', () => {
-            const url = "buscarAutor?autor=" + buscarEl.value;
-            return window.location.href=url;
-        });
+    const buscarAutor = function() {
+        const url = 'buscarAutor?autor=' + buscarEl.value;
+        window.location.href=url;
+    }
+
+    document.getElementById('btnBuscarAutor').addEventListener('click', buscarAutor);
 </script>

@@ -34,6 +34,8 @@
 </html>
 <script>
     'use strict';
-
-    document.getElementById('btnVolver').addEventListener('click', () => { window.location.href="inicio" });
+    const volver = function() {
+        window.loaction.href='inicio';
+    };
+    document.getElementById('btnVolver').addEventListener('click', volver);
 </script>
