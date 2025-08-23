@@ -33,7 +33,7 @@ jobs:
           SONAR_TOKEN:  ${{ secrets.SONAR_TOKEN }}    # token generado en SonarCloud
         run: |
           mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-            -Dsonar.projectKey=rrojasgUSACH_devops2025ciclo1 \
+            -Dsonar.projectKey=mvc-demo \
             -Dsonar.organization=afuentesa-dev \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
