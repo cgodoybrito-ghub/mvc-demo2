@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+    <title>Title</title>
+</head>
+<body>
+<h1>Buscador de Libros</h1>
+<label for="buscar"></label>
+<input id="buscar" type="text" />
+<button id="btnBuscarTitulo" type="button" class="boton-buscar">Buscar por T&iacute;tulo</button>
+<button id="btnBuscarAutor" type="button" class="boton-buscar">Buscar por Autor</button>
+</body>
+</html>
+<script>
+    'use strict';
+
+    const buscarEl = document.getElementById('buscar');
+
+    document.getElementById('btnBuscarTitulo').addEventListener('click', () => {
+            const url = "buscarTitulo?titulo=" + buscarEl.value;
+            return window.location.href=url;
+        });
+
+    document.getElementById('btnBuscarAutor').addEventListener('click', () => {
+            const url = "buscarAutor?autor=" + buscarEl.value;
+            return window.location.href=url;
+        });
+</script>

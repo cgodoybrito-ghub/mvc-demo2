@@ -18,4 +18,14 @@ public class LibroServiceImpl implements LibroService {
     public Iterable<Libro> findAll() {
         return repostory.findAll();
     }
+
+    @Override
+    public Iterable<Libro> findByNombre(final String nombre) {
+        return repostory.findByNombreContaining(nombre);
+    }
+
+    @Override
+    public Iterable<Libro> findByAutor(final String autor) {
+        return repostory.findByAutorContaining(autor);
+    }
 }

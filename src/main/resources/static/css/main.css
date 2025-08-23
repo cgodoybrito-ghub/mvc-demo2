@@ -1,0 +1,68 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilo base para ambos botones */
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-family: sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 12px;
+}
+
+/* Estilo para el botón "Buscar" */
+.boton-buscar {
+  background-color: #28a745; /* Un verde vibrante */
+  color: white;
+}
+
+/* Efecto de "hover" para el botón "Buscar" */
+.boton-buscar:hover {
+  background-color: #218838; /* Un verde más oscuro al pasar el cursor */
+}
+
+/* Estilo para el botón "Volver" */
+.boton-volver {
+  background-color: #007bff; /* Un azul clásico */
+  color: white;
+}
+
+/* Efecto de "hover" para el botón "Volver" */
+.boton-volver:hover {
+  background-color: #0056b3; /* Un azul más oscuro al pasar el cursor */
+}
+
+input[type="text"] {
+  padding: 12px 15px; /* Espaciado interno para que el texto no esté pegado a los bordes */
+  margin: 8px 0; /* Un poco de margen vertical para separarlo de otros elementos */
+  display: inline-block;
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 4px; /* Bordes ligeramente redondeados */
+  box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+  font-family: sans-serif; /* Usa una fuente legible */
+  font-size: 16px; /* Tamaño de fuente estándar */
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave para los efectos */
+}
+
+/* Efecto al hacer clic o al enfocar el input */
+input[type="text"]:focus {
+  border-color: #007bff; /* Borde azul al enfocarlo */
+  outline: none; /* Elimina el contorno predeterminado del navegador */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra suave para un efecto de "brillo" */
+}
