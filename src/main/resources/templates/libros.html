@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini aplicación para laboratorio DevOps</title>
+</head>
+<body>
+<h1>Listado de Libros</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>T&iacute;tulo</th>
+        <th>Autor</th>
+        <th>ISB</th>
+        <th>Editorial</th>
+        <th>Categor&iacute;a</th>
+    </tr>
+    <tr th:each="libro : ${libros}">
+        <td th:text="${libro.id}"></td>
+        <td th:text="${libro.nombre}"></td>
+        <td th:text="${libro.autor}"></td>
+        <td th:text="${libro.isb}"></td>
+        <td th:text="${libro.editorial}"></td>
+        <td th:each="categoria : ${libro.categorias}">
+            <span th:text="${categoria}"></span>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
