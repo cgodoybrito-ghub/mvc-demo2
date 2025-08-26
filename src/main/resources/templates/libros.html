@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Listado de Libros Encontrados</h1>
-<table>
+<table id="tblLibros">
     <tr>
         <th>ID</th>
         <th>T&iacute;tulo</th>
@@ -35,7 +35,7 @@
 <script>
     'use strict';
     const volver = function() {
-        window.loaction.href='inicio';
+        window.location.href='inicio';
     };
     document.getElementById('btnVolver').addEventListener('click', volver);
 </script>
