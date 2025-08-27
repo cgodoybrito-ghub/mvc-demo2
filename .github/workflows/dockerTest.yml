@@ -45,7 +45,7 @@ jobs:
       - name: Up
         run: |
           for i in {i..60}; do
-            if curl -fdD http://locahost:8080/libros/inicio >/dev/null; then
+            if curl -fdD http://localhost:8080/libros/inicio >/dev/null; then
               echo "Aplicación desplegada y lista."
               break
             fi
