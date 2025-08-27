@@ -44,7 +44,7 @@ jobs:
 
       - name: Up
         run: |
-          for i in {i..60}; do
+          for i in {1..60}; do
             if curl -fsS http://localhost:8080/libros/inicio >/dev/null; then
               echo "Aplicación desplegada y lista."
               break
