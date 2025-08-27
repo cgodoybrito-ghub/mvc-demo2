@@ -50,7 +50,7 @@ jobs:
               break
             fi
             echo "Esperando a que la aplicación se inicie... ($i/60)"
-            sleep
+            sleep 2;
           done
 
       - name: Firefox SetUp
