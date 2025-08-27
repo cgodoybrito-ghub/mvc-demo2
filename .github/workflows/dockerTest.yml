@@ -45,7 +45,7 @@ jobs:
       - name: Up
         run: |
           for i in {i..60}; do
-            if curl -fdD http://localhost:8080/libros/inicio >/dev/null; then
+            if curl -fsS http://localhost:8080/libros/inicio >/dev/null; then
               echo "Aplicación desplegada y lista."
               break
             fi
@@ -62,3 +62,7 @@ jobs:
         env:
           BASE_URL: http://localhost:8080/libros/inicio
         run: mvn -B -Dtest=MvcDemoApplicationUITest test
+
+      - name: Down
+        if: always()
+        run: docker compose down -v
