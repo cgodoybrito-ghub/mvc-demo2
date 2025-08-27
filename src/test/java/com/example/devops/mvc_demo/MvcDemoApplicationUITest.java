@@ -65,4 +65,19 @@ class MvcDemoApplicationUITest {
 
         Assertions.assertEquals(1, filas.size());
     }
+    
+    @Test
+    void testBuscarPorAutorPorNombre() {
+        final WebElement input = driver.findElement(By.id("buscar"));
+        input.clear();
+        input.sendKeys("Paulo");
+
+        final WebElement button = driver.findElement(By.id("btnBuscarAutor"));
+        button.click();
+
+        final WebElement tabla = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("tblLibros")));
+        final List<WebElement> filas =  tabla.findElements(By.tagName("tr"));
+
+        Assertions.assertEquals(1, filas.size());
+    }
 }
