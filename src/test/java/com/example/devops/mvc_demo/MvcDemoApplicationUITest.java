@@ -48,7 +48,6 @@ class MvcDemoApplicationUITest {
         final WebElement tabla = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("tblLibros")));
         final List<WebElement> filas =  tabla.findElements(By.tagName("tr"));
 
-
         Assertions.assertTrue(filas.size() > 1);
     }
 
@@ -63,7 +62,6 @@ class MvcDemoApplicationUITest {
 
         final WebElement tabla = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("tblLibros")));
         final List<WebElement> filas =  tabla.findElements(By.tagName("tr"));
-
 
         Assertions.assertEquals(1, filas.size());
     }
